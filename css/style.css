@@ -1,0 +1,297 @@
+
+/*-------- General Styling ----------*/
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+}
+
+/*---------- Header Section ---------------*/
+
+header{
+	background: url(../img/banner-1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 860px;
+}
+
+.top-header{
+	width: 100%;
+	padding-top: 20px;
+}
+
+.navbar-nav{
+	margin-top: 15px;
+}
+
+.navbar .nav-link{
+	color: #fff !important;
+	font-size: 16px;
+	font-weight: 400;
+	margin-left: 30px;
+	transition: 0.5s;
+	position: relative;
+	z-index: 1;
+}
+
+.navbar .nav-link:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 40px solid #f20487;
+	border-radius: 40%;
+	z-index: -1;
+	transform: scale(0);
+	transition: all 0.3s linear;
+}
+
+.navbar .nav-item .active:before, .navbar .nav-link:hover:before {
+    transform: scale(1);
+    transition: all 0.3s linear;
+}
+
+.nav-btn .btn {
+	width: 165px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	background-color: #f20487;
+	display: inline-block;
+	padding: 13px 35px;
+	border: none;
+	border-radius: 10px;
+	transition: all 0.3s linear;
+}
+
+.nav-btn .btn:hover{
+	background: #4b1ece;
+	transition: all 0.3s linear;
+}
+
+.navbar .dropdown-btn{
+    position: absolute;
+    top: -20px;
+    right: -80px;
+}
+.navbar .dropdown-btn .fa {
+    width: 50px;
+    height: 65px;
+    background: #fff;
+    line-height: 65px;
+    text-align: center;
+    border-radius: 0 0 50% 50%;
+    color: #000;
+    font-size: 30px;
+}
+/*---------- Banner Section ---------------*/
+
+#banner-section{
+	padding-top: 200px;
+}
+
+.banner-info h1{
+	 font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.banner-info p{
+	font-size: 22px;
+    font-weight: 400;
+}
+
+.banner-info .btn{
+	background: #4b1ece;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	width: 180px;
+	display: inline-block;
+	padding: 15px 12px 12px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 10px;
+	transition: all 0.3s linear;
+}
+
+.banner-info .btn:hover{
+	background: #fff;
+	color: #4b1ece;
+	transition: all 0.3s linear;
+}
+
+.btn:focus{
+	outline: 0;
+	box-shadow: none;
+}
+
+/*---------- End of Header Section ---------------*/
+
+/*---------- Footer Section ---------------*/
+
+footer{
+	background: url(../img/footer.jpg) no-repeat center/cover;
+	padding: 100px 0 50px 0;
+}
+
+footer .newsletter h6{
+	font-size: 16px;
+	font-weight: 500;
+}
+
+footer .newsletter h3{
+	font-size: 35px;
+	font-weight: 700;
+}
+
+
+footer .form-control{
+	height: 100px;
+    position: relative;
+    padding: 0px 38px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #818a94;
+}
+
+footer .btn{
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	width: 180px;
+	background-color: #f20487;
+	display: inline-block;
+	padding: 13px 50px;
+	position: absolute;
+	top: 61%;
+	right: -8%;
+	border-radius: 10px;
+	transition: all 0.3s linear;
+}
+
+footer .btn:hover{
+	color: #fff;
+	background-color: #4b1ece;
+	transition: all 0.3s linear;
+}
+
+footer .footer-social{
+	margin-top: 90px;
+}
+
+footer .footer-social a .fa:hover, footer .footer-social .fa-twitter{
+	color: #4125dd;
+	transition: all 0.3s linear;
+}
+
+footer .footer-menu a{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+footer .copyright-text{
+	font-size: 15px;
+	font-weight: 500;
+}
+
+footer .highlighted-text{
+	color: #f20487;
+}
+footer .highlighted-text:hover{
+	color: #4b1ece;
+}
+
+
+/*---------- End of Footer Section ---------------*/
+
+
+/*---------- Responsive ---------------*/
+
+@media(max-width: 1199px){
+   .navbar .dropdown-btn{
+   	  visibility: hidden;
+   }
+}
+
+@media(max-width: 991px){
+.top-header{
+		background: #12114A;
+		padding-top: 0;
+	}
+
+.navbar-toggler{
+	background: #fff;
+}
+
+.navbar .nav-link{
+	margin-top: 15px;
+}
+
+.navbar .nav-item .active:before, .navbar .nav-link:hover:before {
+    transform: scale(0);
+}
+
+.navbar .nav-item .active, .navbar .nav-link:hover {
+    color: #4b1ece !important;
+    transition: all 0.3s linear;
+}
+
+.nav-btn {
+	margin-top: 20px;
+}
+
+.banner-info p br{
+	display: none;
+}
+ footer .newsletter h3{
+  	font-size: 26px;
+  }	
+
+footer .form-control{
+	max-width: 100%;	
+	height: 40px;
+    padding: 0px 20px;
+}
+
+footer .btn{
+	width: 120px;
+	padding: 5px 20px;
+	margin-top: 5px;
+	position: static;
+}
+
+footer .footer-social{
+	margin-top: 50px;
+}
+
+footer .footer-menu a{
+	font-size: 17px;
+}
+
+footer .copyright-text{
+	font-size: 12px;
+}
+
+}
+
+@media(max-width: 575px){
+
+   .banner-info h1{
+     font-size: 30px;
+  }
+
+}
+
